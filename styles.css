@@ -1,25 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #343d4b;
 }
 
 .weather-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     width: 80%;
-    max-width: 1200px;
+    max-width: 600px;
     margin: auto;
 }
 
 .search {
-    grid-column: 1 / span 2;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -41,15 +41,32 @@ body {
     cursor: pointer;
 }
 
-.current-weather, .forecast {
-    background-color: #fff;
+.current-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #222831;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.current-weather img, .forecast img {
+.temp-container {
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.details-container {
+    text-align: center;
+}
+
+.current-weather img {
     display: block;
     margin: 0 auto 10px;
 }
+
+
 
