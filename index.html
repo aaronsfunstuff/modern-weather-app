@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Updates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Updates</h1>
+    </header>
+    <main>
+        <section class="search">
+            <input type="text" id="location" placeholder="Enter city or location">
+            <button id="searchBtn">Search</button>
+        </section>
+        <section class="current-weather">
+            <h2 id="locationName"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </section>
+        <section class="forecast">
+            <h2>7-Day Forecast</h2>
+            <div id="forecastContainer"></div>
+        </section>
+        <section class="alerts">
+            <h2>Weather Alerts</h2>
+            <div id="alertsContainer"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
