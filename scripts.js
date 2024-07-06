@@ -4,7 +4,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 });
 
 async function fetchWeather(location) {
-    const apiKey = 'e49e475c5c0f328050cfd6770a9dcd07';  // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+    const apiKey = 'e49e475c5c0f328050cfd6770a9dcd07';  
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
 
     try {
@@ -18,7 +18,7 @@ async function fetchWeather(location) {
             locationName: data.name,
             temperature: `${data.main.temp}°C`,
             description: data.weather[0].description,
-            icon: data.weather[0].icon,  // Get the icon code
+            icon: data.weather[0].icon, 
             humidity: `${data.main.humidity}%`,
             windSpeed: `${data.wind.speed} m/s`
         };
@@ -32,7 +32,7 @@ async function fetchWeather(location) {
 
 function displayWeather(data) {
     document.getElementById('locationName').innerText = data.locationName;
-    document.getElementById('temperature').innerText = `Temperature: ${data.temperature}`;
+    document.getElementById('temperature').innerText = data.temperature;
     document.getElementById('description').innerText = `Description: ${data.description}`;
     document.getElementById('humidity').innerText = `Humidity: ${data.humidity}`;
     document.getElementById('windSpeed').innerText = `Wind Speed: ${data.windSpeed}`;
@@ -42,3 +42,4 @@ function displayWeather(data) {
     weatherIcon.src = `https://openweathermap.org/img/wn/${data.icon}@2x.png`;
     weatherIcon.alt = data.description;
 }
+
