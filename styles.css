@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #343d4b;
+   color:white;
 }
 
 .weather-container {
@@ -67,6 +68,7 @@ body {
     display: block;
     margin: 0 auto 10px;
 }
+
 
 
 
